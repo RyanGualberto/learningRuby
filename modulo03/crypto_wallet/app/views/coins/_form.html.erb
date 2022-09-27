@@ -21,12 +21,18 @@
     <%= form.text_field :acronym %>
   </div>
 
-  <div>
-    <%= form.label :url_image, style: "display: block" %>
-    <%= form.text_field :url_image %>
-  </div>
+    <div>
+      <%= form.label :url_image, style: "display: block" %>
+      <%= form.text_field :url_image  %>
+    </div>
 
-  <div>
+
+   <div>
+      <%= form.label :mining_type_id, style: "display: block" %>
+      <%= form.select("mining_type_id", MiningType.all.collect { |m| [m.description, m.id]}, {include_blank: "Selecione..."})  %>
+    </div> 
+
+  <div class="action">
     <%= form.submit %>
   </div>
 <% end %>
