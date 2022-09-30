@@ -2,13 +2,34 @@
 
 <h1>Coins</h1>
 
-<div id="coins">
+<table class="table table-dark table-hover">
+  <thead>
+    <tr>
+      <th><strong><%= @coins.human_attribute_name(:description) %>:</strong></th>
+      <th><strong><%= @coins.human_attribute_name(:acronym) %>:</strong></th>
+      <th><strong><%= @coins.human_attribute_name(:url_image) %>:</strong></th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
   <% @coins.each do |coin| %>
-    <%= render coin %>
-    <p>
-      <%= link_to "mostrar essa moeda", coin %>
-    </p>
+    <tr>
+      <td> 
+          <%= coin.description %>
+      </td>
+      <td>
+        <%= coin.acronym %>
+      </td>
+      <td>
+        <img src="<%= coin.url_image  %>"  width="50px" height="50px" />
+      </td>
+      <td>
+        <%= link_to "mostrar essa moeda", coin %>
+        <%= link_to "criar nova moeda", new_coin_path %>
+      </td>
+    </tr>
   <% end %>
-</div>
+  </tbody>
+</table>
 
-<%= link_to "criar nova moeda", new_coin_path %>
+

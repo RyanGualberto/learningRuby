@@ -1,0 +1,24 @@
+"pt-BR":
+  activerecord:
+    models:
+      coin:
+        one: Moeda
+        other: Moedas
+      mining_type:
+        one: Tipo De Mineração
+        other: Tipo De Mineração
+    attributes:
+      coin:
+        description: Descrição
+        acronym: Sigla
+        url_image: URL Da Imagem
+        mining_type: Tipo De Mineração
+        mining_type_id: ID Do Tipo De Mineração
+        created_at: Criado Em
+        updated_at: Atualizado em
+      mining_type:
+        id: Código
+        description: Descrição
+        acronym: Sigla
+        updated_at: Atualizado em
+        created_at: Criado em
